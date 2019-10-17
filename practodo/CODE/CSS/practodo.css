@@ -1,0 +1,105 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	background: #9CECFB;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1{
+	background-color: #2980b9;
+	color: white;
+	margin:0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+
+ul{
+	/*to remove bullets we use list-style to be none*/
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+li{
+	background-color: white;
+	height: 40px;
+	line-height: 40px;
+	/*we hwve used it so that line can cover the entire area*/
+	color: #666;
+}
+
+/*nth child(2n) means every second <li> because we have mentioned 2n otherwise if we would have written 3n therefore it would have referred to every third <li> and so on */
+li:nth-child(2n){
+	background-color: #f7f7f7;
+}
+
+
+#container{
+	margin: 100px auto;
+    width:325px;
+    /*box-shadow*/
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    background-color: #f7f7f7;
+}
+
+
+
+
+
+.deco{
+	text-decoration: line-through;
+	color:grey;
+}
+
+
+
+
+
+input{
+	font-size: 18px;
+	background-color: #f7f7f7;
+	width:100%;
+	padding:13px 13px 13px 20px;
+	/*very very important*/
+	/*box-sizing*/
+	box-sizing: border-box;
+	border: 0;
+	color:#2980b9;
+}
+
+
+/*it works(i.e changes its property) when we click on it */
+input:focus{
+	background-color: white;
+	border: 1px solid #2980b9;
+
+	/*to remove the annoying outline that we get from browser by default*/
+	outline: none;
+}
+
+.fa-plus{
+	float: right;
+}
+
+
+span{
+	background-color: #e74c3c;
+	height: 40px;
+	text-align: center;
+	color: white;
+	width:0;
+	margin-right: 20px;
+	/*to get complete square block*/
+	display: inline-block;
+	transition: 0.2s linear;
+}
+/*it means when we hover over <li> then width of span changes to 40 */
+li:hover span{
+	width:40px;
+	outline: none;
+}
